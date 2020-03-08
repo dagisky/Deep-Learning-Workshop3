@@ -5,6 +5,7 @@ print(unsorted)
 
 def selection_sort(num_list):
 	num_list = list(num_list)
+	
 	for i in range(len(num_list)):
 		minimum = num_list[i]
 		for j in range(i+1, len(num_list)):
