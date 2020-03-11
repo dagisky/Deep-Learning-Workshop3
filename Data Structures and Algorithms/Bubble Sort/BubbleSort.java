@@ -1,6 +1,6 @@
 package sort;
 
-public class BubleSort {
+public class BubbleSort {
 	private int[] array;
 	
 	public int[] getArray() {
@@ -9,7 +9,7 @@ public class BubleSort {
 	public void setArray(int[] array) {
 		this.array = array;
 	}
-	public void BubleSort(int []a) {
+	public void BubbleSort(int []a) {
 		this.array = a;
 	}
 	public int[] sort() {
