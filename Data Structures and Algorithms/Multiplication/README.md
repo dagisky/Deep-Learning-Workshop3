@@ -7,7 +7,7 @@ If *A* is an m × n matrix and *B* is an n × p matrix.
 the matrix product C = AB (denoted without multiplication signs or dots) is defined to be the m × p matrix
 [![matrix mul product](https://wikimedia.org/api/rest_v1/media/math/render/svg/7d3ce5d06e84e1a8575ce6f1d47a90d006baf628)]  
 Such that  
-[![eqn](https://wikimedia.org/api/rest_v1/media/math/render/svg/ee372c649dea0a05bf1ace77c9d6faf051d9cc8d)]  
+![eqn](https://wikimedia.org/api/rest_v1/media/math/render/svg/ee372c649dea0a05bf1ace77c9d6faf051d9cc8d)  
 ### Example
 [![example](https://www.mathwarehouse.com/algebra/matrix/images/matrix-multiplication/dimensions-of-product-matrix-v2.webp)]
 
