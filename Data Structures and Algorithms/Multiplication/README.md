@@ -1,5 +1,5 @@
-# Algorithms
-## Matrix Multiplication 
+# Matrix Multiplication Algorithms
+## Naive Matrix Multiplication 
 The normal matrix multiplication runs with O(n^3) time complexity. 
 ### Defination 
 If *A* is an m × n matrix and *B* is an n × p matrix.  
@@ -26,6 +26,34 @@ def mul(x,y):
 
 Java Code is also provided.
 
+## Devide and Conquer Mulltiplication
+Simple Divide and Conquer method multiplies two square matrices by.
+1) Dividing matrices A and B in 4 sub-matrices of size N/2 x N/2 as shown in the below diagram.
+2) Calculate following values recursively. ae + bg, af + bh, ce + dg and cf + dh.
+
+![Devide and conquer Matrix Multiplication](https://media.geeksforgeeks.org/wp-content/cdn-uploads/strassen_new.png)
+
+In the above method, we do 8 multiplications for matrices of size N/2 x N/2 and 4 additions. Addition of two matrices takes O(N2) time. So the time complexity can be written as
+```sh
+T(N) = 8T(N/2) + O(N2)  
+
+From Master\'s Theorem, time complexity of above method is O(N3)
+which is unfortunately same as the above naive method.
+```
+## Python Code Sample
+```sh
+def mul(m1, m2):
+	n = len(m1)
+	r = np.zeros((n,n))
+	a, b, c, d = m1[:n//2,:n//2], m1[:n//2,n//2:], m1[n//2:,:n//2], m1[n//2:,n//2:]
+	e, f, g, h = m2[:n//2,:n//2], m2[:n//2,n//2:], m2[n//2:,:n//2], m2[n//2:,n//2:]
+	if len(m1) > 2:			
+		s11, s12, s21, s22 = mul(a,e)+mul(b,g), mul(a,f)+mul(b,h), mul(c,e)+mul(d,g), mul(c,f)+mul(d,h)
+	else:
+		s11, s12, s21, s22 = a*e+b*g, a*f+b*h, c*e+d*g, c*f+d*h
+	r[:n//2,:n//2], r[:n//2,n//2:], r[n//2:,:n//2], r[n//2:,n//2:] = s11, s12, s21, s22
+	return r
+```
 License
 ----
 

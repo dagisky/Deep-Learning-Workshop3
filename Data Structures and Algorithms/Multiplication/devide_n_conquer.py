@@ -6,8 +6,11 @@ print(a)
 print(b)
 print('--------dot product---------')
 
-
+global i
+i = 1
 def mul(m1, m2):
+	i += 1
+	print(i)
 	n = len(m1)
 	r = np.zeros((n,n))
 	a, b, c, d = m1[:n//2,:n//2], m1[:n//2,n//2:], m1[n//2:,:n//2], m1[n//2:,n//2:]
