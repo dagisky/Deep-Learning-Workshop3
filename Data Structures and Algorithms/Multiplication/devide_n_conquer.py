@@ -4,7 +4,7 @@ a = np.random.randint(5, size=(4,4))
 b = np.random.randint(5, size=(4,4))
 print(a)
 print(b)
-print('--------product---------')
+print('--------dot product---------')
 
 
 def mul(m1, m2):
@@ -21,6 +21,3 @@ def mul(m1, m2):
 
 m = mul(a,b)
 print(np.asarray(m))
-print('-----------product2------------')
-m2 = np.dot(a,b)
-print(m2)
