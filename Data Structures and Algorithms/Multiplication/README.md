@@ -11,7 +11,7 @@ Such that
 ### Example
 ![example](https://www.mathwarehouse.com/algebra/matrix/images/matrix-multiplication/dimensions-of-product-matrix-v2.webp)
 
-## Python Code Sample
+### Python Code Sample
 
 ```sh
 def mul(x,y):	
@@ -40,7 +40,7 @@ T(N) = 8T(N/2) + O(N^2)
 From Master\'s Theorem, time complexity of above method is O(N3)
 which is unfortunately same as the above naive method.
 ```
-## Python Code Sample
+### Python Code Sample
 ```sh
 def mul(m1, m2):
 	n = len(m1)
