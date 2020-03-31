@@ -4,7 +4,7 @@ pts = np.random.randint(20, size=(10,2))
 print(pts)
 
 def Euclidean_Distance(a, b):
-	return math.sqrt(a**2+b**2)
+	return math.sqrt((a[0]-b[0])**2+(a[1]-b[1])**2)
 
 
 def BruteForceClosestPair(Array):
@@ -64,10 +64,37 @@ def mergesort(numlist, sorting='x'):
 
 	return numlist
 
+def Closest_Pair(Px,Py):
+    if len(Px) <= 3:
+        return BruteForceClosestPair(Px)
 
-print('====== X sorted =========')		
-x_sorted_list = mergesort(pts)
-print(np.asarray(x_sorted_list))
-print('====== Y sorted =========')
-y_sorted_list = mergesort(pts, 'y')
-print(np.asarray(y_sorted_list))
+    midpoint_x = len(Px) // 2
+    Qx = Px[:midpoint_x]
+    Rx = Px[midpoint_x:]
+    median_x = Px[midpoint_x]
+    Qy,Ry = [], []
+    for point in Py:
+        if point[0] < int(median_x[0]):
+            Qy.append(point)
+        else:
+            Ry.append(point)
+
+    min_distance_Left = Closest_Pair(Qx,Qy)
+    min_distance_Right = Closest_Pair(Rx,Ry)
+    min_distance = min(min_distance_Left,min_distance_Right)
+
+
+def Initial_Sort(P):
+    Px = mergesort(P,'x')
+    Py = mergesort(P,'y')
+    return Px,Py
+
+
+
+print('====== Brute Force Shortest path =========')
+dist, xy = BruteForceClosestPair(pts)
+print((dist, xy))
+print('====== Divide and Conquer =========')
+Px, Py = Initial_Sort(pts)
+dist, xy = Closest_Pair(Px, Py)
+print((dist, xy))
