@@ -3,7 +3,7 @@ The simplest solutions are usually the most powerful ones, and Naive Bayes is a 
 
 ## Baye’s Theorem
  describes the probability of an event, based on prior knowledge of conditions that might be related to the event.[1] For example, if the probability that someone has cancer is related to their age.
- $\frac{n!}{k!(n-k)!}$
+ \frac{n!}{k!(n-k)!}
 ### Example
 Given an array of  x = ( 5, 1, 4, 2, 8 )
 #### First Pass
