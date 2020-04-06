@@ -3,7 +3,8 @@ The simplest solutions are usually the most powerful ones, and Naive Bayes is a 
 
 ## Baye’s Theorem
  describes the probability of an event, based on prior knowledge of conditions that might be related to the event.[1] For example, if the probability that someone has cancer is related to their age.
-$\nabla \cdot \vec{u} = 0$
+![Baye’s Theorem](https://wikimedia.org/api/rest_v1/media/math/render/svg/87c061fe1c7430a5201eef3fa50f9d00eac78810)
+where {\displaystyle A}A and {\displaystyle B}B are events and {\displaystyle P(B)\neq 0}{\displaystyle P(B)\neq 0}.
 ### Example
 Given an array of  x = ( 5, 1, 4, 2, 8 )
 #### First Pass
