@@ -2,9 +2,14 @@
 The simplest solutions are usually the most powerful ones, and Naive Bayes is a good example of that. Naive Bayes is a family of probabilistic algorithms that take advantage of probability theory and Bayes’ Theorem (Bayes’ Theorem, which describes the probability of a feature, based on prior knowledge of conditions that might be related to that feature.) to predict the tag of a text (like a piece of news or a customer review). We’re going to be working with an algorithm called Multinomial Naive Bayes.
 
 ## Baye’s Theorem
- describes the probability of an event, based on prior knowledge of conditions that might be related to the event.[1] For example, if the probability that someone has cancer is related to their age.
+ describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if the probability that someone has cancer is related to their age.
+
 ![Baye’s Theorem](https://wikimedia.org/api/rest_v1/media/math/render/svg/87c061fe1c7430a5201eef3fa50f9d00eac78810)
-where {\displaystyle A}A and {\displaystyle B}B are events and {\displaystyle P(B)\neq 0}{\displaystyle P(B)\neq 0}.
+
+where A and B are events and  P(A)$\neq$0 and P(B)$\neq$0
+
+In our case: P(class|data) = (P(data|class) * P(class)) / P(data)
+
 ### Example
 Given an array of  x = ( 5, 1, 4, 2, 8 )
 #### First Pass
