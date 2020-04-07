@@ -21,35 +21,14 @@ One important thing to note about hyper-parameters is that, often, they take on 
  "colsample_bytree" : [ 0.3, 0.4, 0.5 , 0.7 ] }
 ```
 
+This discrete subspace of all possible hyper-parameters is called the hyper-parameter grid. In what follows, we will use the vector notation symbol h = [h0, h1, …, hp] to denote any such combination, that is, any point in the grid.
 
-#### Second Pass:
-- ( **1**, **4**, 2, 5, 8 ) –> ( **1**, **4**, 2, 5, 8 )
-- ( 1, **4**, **2**, 5, 8 ) –> ( 1, **2**, **4**, 5, 8 ), Swap since 4 > 2
-- ( 1, 2, **4**, **5**, 8 ) –> ( 1, 2, **4**, **5**, 8 )
-- ( 1, 2, 4, **5**, **8** ) –>  ( 1, 2, 4, **5**, **8** )
+#### Exhaustive Grid Search (GS)
+Exhaustive grid search (GS) is nothing other than the brute force approach that scans the whole grid of hyper-param combinations h in some order, computes the cross-validation loss for each one and finds the optimal h* in this manner. An interesting alternative is scanning the whole grid in a fully randomized way that is, according to a random permutation of the whole grid . With this type of search, it is likely that one encounters close-to-optimal regions of the hyper-param space early on
 
-Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted. Thus the algorithm will go on to the third pass
+#### Coordinate descent (CD)
+Coordinate descent (CD) is one of the simplest optimization algorithms. It’s an iterative algorithm, similar to gradient descent, but even simpler! The basic idea is that, at each iteration, only one of the coordinate directions of our search vector h is altered. To pick which one, we examine each coordinate direction turn and minimize the objective function by varying that coordinate and leaving all the other constant. Then we pick the direction that yields the most improvement.
 
-## Python Code Sample
+### Genetic algorithm
+Genetic algorithms (GAs) are a whole class of optimization algorithms of rather general applicability and are particularly well adapted for high-dimensional discrete search spaces. A genetic algorithm tries to mimic nature by simulating a population of feasible solutions to a(n optimization) problem as they evolve through several generations and survival of the fittest is enforced. 
 
-```sh
-def bubble_sort(num_list):
-	n = len(num_list)
-	# Traverse through all array elements
-	for i in range(n):
-		# The last elements are already in place
-		for j in range(0, n-i-1):
-			# Traverse the array from 0 to n-i-1
-			# Swap if the element is found greater than the 
-			# next element
-			if num_list[j] > num_list[j+1]:
-				num_list[j], num_list[j+1] = num_list[j+1], num_list[j]
-	return num_list
-```
-
-Java Code is also provided.
-
-License
-----
-
-None
