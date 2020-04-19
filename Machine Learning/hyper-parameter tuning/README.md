@@ -1,5 +1,5 @@
 # Machine Learning
-## Doing XGBoost hyper-parameter tuning the smart way 
+## Doing hyper-parameter tuning the smart way 
 Here we introduce three general purpose discrete optimization algorithms aimed at search for the optimal hyper-param combination: grid-search, coordinate descent and genetic algorithms. we will focus on optimizing XGBoost hyper-parameters in our experiment However, pretty much all of what is discussed here applies to any other advanced ML algorithms.
 
 Usually, the more flexible and powerful an algorithm is, the more design decisions and adjustable hyper-parameters it will have. These are parameters specified by “hand” to the algo and fixed throughout a training pass.
