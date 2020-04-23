@@ -64,13 +64,18 @@ def mergesort(numlist, sorting='x'):
 
 	return numlist
 
-def Closest_Pair(Px,Py):
-    if len(Px) <= 3:
-        return BruteForceClosestPair(Px)
+def Closest_Pair(P):
+    if len(P) <= 3:
+        return BruteForceClosestPair(P)
+    Px, Py = Initial_Sort(P)
+    midpoint = len(Px) // 2
+    Qx = Px[:midpoint]
+    Ry = Px[midpoint:]
 
-    midpoint_x = len(Px) // 2
-    Qx = Px[:midpoint_x]
-    Rx = Px[midpoint_x:]
+    midpoint = len(Py) // 2
+    Qx = Py[:midpoint]
+    Qy = Py[midpoint:]
+
     median_x = Px[midpoint_x]
     Qy,Ry = [], []
     for point in Py:
