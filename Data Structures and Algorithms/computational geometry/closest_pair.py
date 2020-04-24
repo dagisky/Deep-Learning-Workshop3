@@ -20,7 +20,7 @@ def BruteForceClosestPair(Array):
             if distance < minimum_distance:
                 minimum_distance = distance
                 Target_Pair = (Array[i],Array[j])
-    return Target_Pair, minimum_distance
+    return minimum_distance, Target_Pair
 
 
 def mergesort(numlist, sorting='x'):
@@ -65,12 +65,12 @@ def mergesort(numlist, sorting='x'):
 	return numlist
 
 def Closest_Pair(Px, Py):
-    if len(Px) <= 3:
-        return BruteForceClosestPair(Px)
-    
-    midpoint_x = len(Px) // 2 # int division of lenght of the x sorted array
-    Qx = Px[:midpoint_x]
-    Rx = Px[midpoint_x:]
+	if len(Px) <= 3:
+		return BruteForceClosestPair(Px)
+
+	midpoint_x = len(Px) // 2 # int division of lenght of the x sorted array
+	Qx = Px[:midpoint_x]
+	Rx = Px[midpoint_x:]
 	median_x = Px[midpoint_x]
 	Qy,Ry = [], []
 
@@ -80,10 +80,27 @@ def Closest_Pair(Px, Py):
 		else:
 			Ry.append(point)
 
-    min_distance_Left = Closest_Pair(Qx,Qy)
-    min_distance_Right = Closest_Pair(Rx,Ry)    
-    min_distance = min(min_distance_Left,min_distance_Right)
+	min_distance_Left = Closest_Pair(Qx,Qy)
+	min_distance_Right = Closest_Pair(Rx,Ry) 
+	
+	if min_distance_Left[0] <= min_distance_Right[0]:
+		min_distance = min_distance_Left
+	else:
+		min_distance = min_distance_Right   
+	# min_distance = min(min_distance_Left, min_distance_Right)
 
+	x_bar = Qx[-1][0]
+	Sy = []
+	for y in Py:
+		if x_bar - min_distance[0] < y[0] < x_bar + min_distance[0]:
+			Sy.append(y)
+	best_pair = (0, 0)
+	for i in range(len(Sy)-1):
+		for j in range(i+1, min(i+7, len(Sy))):
+			dist = Euclidean_Distance(Sy[i], Sy[j])
+			if dist < min_distance[0]:
+				min_distance = (dist, Sy[i], Sy[j])
+	return min_distance
 
 def Initial_Sort(P):
     Px = mergesort(P,'x')
@@ -97,5 +114,5 @@ dist, xy = BruteForceClosestPair(pts)
 print((dist, xy))
 print('====== Divide and Conquer =========')
 Px, Py = Initial_Sort(pts)
-dist, xy = Closest_Pair(Px, Py)
-print((dist, xy))
+dist, x, y = Closest_Pair(Px, Py)
+print((dist, x, y))
