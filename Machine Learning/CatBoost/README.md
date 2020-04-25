@@ -1,30 +1,14 @@
-# Gradient Boost Regressor
+# CatBoost
 ## Brief description for Ensemble, Bagging and Boosting
-When we try to predict the target variable using any machine learning technique, the main causes of difference in actual and predicted values are noise, variance, and bias. Ensemble helps to reduce these factors (except noise, which is irreducible error)
-An ensemble is just a collection of predictors which come together (e.g. mean of all predictions) to give a final prediction. 
+CatBoost is based on gradient boosting. A new machine learning technique developed by Yandex that outperforms many existing boosting algorithms like XGBoost, Light GBM. 
 
-The reason we use ensembles is that many different predictors trying to predict same target variable will perform a better job than any single predictor alone. Ensembling techniques are further classified into Bagging and Boosting. Example of bagging ensemble is Random Forest models.
+
 ### Bagging
-Bagging is a simple ensembling technique in which we build many independent predictors/models/learners and combine them using some model averaging techniques. (e.g. weighted average, majority vote or normal average)
+One main difference between CatBoost and other boosting algorithms is that the CatBoost implements symmetric trees, which helps in decreasing prediction time.
 ### Boosting
 Boosting is an ensemble technique in which the predictors are not made independently, but sequentially. This technique employs the logic in which the subsequent predictors learn from the mistakes of the previous predictors. The predictors can be chosen from a range of models like decision trees, regressors, classifiers etc. Because new predictors are learning from mistakes committed by previous predictors, it takes less time/iterations to reach close to actual predictions. Gradient Boosting is an example of boosting algorithm.
 
 ![Ensemble](https://drive.google.com/open?id=19VjqRRxqJe3xi3-gS_jVMzO7WMDlVlBM)
-
-<table>
-    <tr>
-        <th>Height (m)</th>
-        <th>Fev. Color</th>
-        <th>Gender</th>
-        <th>Weight</th>
-    </tr>
-    <tr>
-    	<td>1.6</td>
-    	<td>Blue</td>
-    	<td>Male</td>
-    	<td>88</td>
-    </tr>
-</table>
 
 ## Baye’s Theorem
  describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if the probability that someone has cancer is related to their age.
