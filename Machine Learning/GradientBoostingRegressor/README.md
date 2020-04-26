@@ -50,7 +50,7 @@ Boosting is an ensemble technique in which the predictors are not made independe
     </tr>
 </table>
 
-![Gradient Boost](../../utils/imgs/Ensembling.png)
+![Gradient Boost](../../Utils/Imgs/Ensembling.png)
 
 ## Baye’s Theorem
  describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if the probability that someone has cancer is related to their age.
