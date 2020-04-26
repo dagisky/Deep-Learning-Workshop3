@@ -21,8 +21,32 @@ Boosting is an ensemble technique in which the predictors are not made independe
     <tr>
     	<td>1.6</td>
     	<td>Blue</td>
+    	<td>Female</td>
+    	<td>76</td>
+    </tr>
+    <tr>
+    	<td>1.5</td>
+    	<td>Blue</td>
+    	<td>Female</td>
+    	<td>56</td>
+    </tr>
+    <tr>
+    	<td>1.8</td>
+    	<td>Red</td>
     	<td>Male</td>
-    	<td>88</td>
+    	<td>73</td>
+    </tr>
+    <tr>
+    	<td>1.5</td>
+    	<td>Green</td>
+    	<td>Male</td>
+    	<td>77</td>
+    </tr>
+    <tr>
+    	<td>1.4</td>
+    	<td>Blue</td>
+    	<td>Female</td>
+    	<td>57</td>
     </tr>
 </table>
 
