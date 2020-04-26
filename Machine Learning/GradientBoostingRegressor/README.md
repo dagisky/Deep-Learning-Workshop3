@@ -9,7 +9,7 @@ Bagging is a simple ensembling technique in which we build many independent pred
 ### Boosting
 Boosting is an ensemble technique in which the predictors are not made independently, but sequentially. This technique employs the logic in which the subsequent predictors learn from the mistakes of the previous predictors. The predictors can be chosen from a range of models like decision trees, regressors, classifiers etc. Because new predictors are learning from mistakes committed by previous predictors, it takes less time/iterations to reach close to actual predictions. Gradient Boosting is an example of boosting algorithm.
 
-![Ensemble](https://drive.google.com/open?id=19VjqRRxqJe3xi3-gS_jVMzO7WMDlVlBM)
+![Ensemble](https://photos.app.goo.gl/wpE3kgq6zkTyk6o27)
 
 <table>
     <tr>
@@ -49,6 +49,8 @@ Boosting is an ensemble technique in which the predictors are not made independe
     	<td>57</td>
     </tr>
 </table>
+
+![Gradient Boost](https://photos.app.goo.gl/knMpJ4CdmRXUSMWW9)
 
 ## Baye’s Theorem
  describes the probability of an event, based on prior knowledge of conditions that might be related to the event. For example, if the probability that someone has cancer is related to their age.
