@@ -12,12 +12,12 @@ Boosting is an ensemble technique in which the predictors are not made independe
 
 
 <table>
-    <tr>
+    <th style="background-color:blue; color: white;">
         <th>Height (m)</th>
         <th>Fev. Color</th>
         <th>Gender</th>
         <th>Weight</th>
-    </tr>
+    </th>
     <tr>
     	<td>1.6</td>
     	<td>Blue</td>
